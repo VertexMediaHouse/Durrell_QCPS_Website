@@ -1,0 +1,39 @@
+import './App.css';
+import { useReveal } from './useReveal';
+import { Header } from './sections/Header';
+import { Hero } from './sections/Hero';
+import { SearchBar } from './sections/SearchBar';
+import { Properties } from './sections/Properties';
+import { Services } from './sections/Services';
+import { WhyUs } from './sections/WhyUs';
+import { About } from './sections/About';
+import { Steps } from './sections/Steps';
+import { Testimonials } from './sections/Testimonials';
+import { Journal } from './sections/Journal';
+import { Faqs } from './sections/Faqs';
+import { Cta } from './sections/Cta';
+import { Footer } from './sections/Footer';
+
+export default function App() {
+  useReveal();
+
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <SearchBar />
+        <Properties />
+        <Services />
+        <WhyUs />
+        <About />
+        <Steps />
+        <Testimonials />
+        <Journal />
+        <Faqs />
+        <Cta />
+      </main>
+      <Footer />
+    </>
+  );
+}
