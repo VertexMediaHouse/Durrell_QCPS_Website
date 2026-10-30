@@ -5,6 +5,7 @@ export const nav = [
   { label: 'Home', href: '/' },
   { label: 'Properties', href: '/properties' },
   { label: 'About', href: '/about' },
+  { label: 'How It Works', href: '/how-it-works' },
   { label: 'Journal', href: '/journal' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -248,4 +249,144 @@ export const footer = {
     { label: 'Privacy Policy', href: '/privacy-policy' },
     { label: 'Terms of Use', href: '/terms' },
   ],
+};
+
+export const aboutIntro = {
+  eyebrow: 'Our story',
+  heading: 'Find Easy Home with Dullet.',
+  body: 'Dullet has worked the same way ever since: fewer listings, more attention, and advice built around the people in front of us.',
+  image: '/images/sIEVbo8LLQKanQZNJHuKVdAPI.jpg',
+};
+
+export const principles = [
+  {
+    no: '01',
+    name: 'We listen before we show',
+    body: 'A search starts with a conversation, not a scroll. What you tell us shapes what we bring back.',
+  },
+  {
+    no: '02',
+    name: 'We say no to the wrong fit',
+    body: 'If a property doesn’t suit your life, we’ll tell you — even if it costs us a showing.',
+  },
+  {
+    no: '03',
+    name: 'We stay reachable',
+    body: 'Questions don’t wait for office hours. You’ll always know who to call and what happens next.',
+  },
+];
+
+export const team = [
+  {
+    name: 'Renata Soto',
+    role: 'Founder & Principal Broker',
+    image: '/images/ScqYgwXGtkYn4LQsXnnRvjbKeQ.jpg',
+  },
+  {
+    name: 'Marcus Oyelaran',
+    role: 'Director of Sales',
+    image: '/images/UBtXSOm60enCUciUxosYAh2Tb3U.jpg',
+  },
+  {
+    name: 'Priya Chandrasekar',
+    role: 'Client Advisor',
+    image: '/images/srdofgzEhtrL8TxYBsevEIF9ldA.jpg',
+  },
+];
+
+export const aboutStat = {
+  statValue: '15',
+  statSuffix: ' yrs',
+  statLabel: 'Guiding buyers, sellers, and renters through every kind of move',
+  quote: 'Every property we show, we’ve walked through ourselves — not from a spec sheet.',
+  image: '/images/0aFNp7LzIOj6XTwUgydu66svc8.jpg',
+};
+
+export const aboutFaqs = [
+  {
+    q: 'How is ESTAVORA different from a typical agency?',
+    a: 'We work with a smaller number of clients at a time, so recommendations stay specific to you rather than generic listings.',
+  },
+  {
+    q: 'Do you only work in one city?',
+    a: 'We cover several markets directly and partner with trusted local agents elsewhere, so you get the same standard of advice anywhere.',
+  },
+  {
+    q: 'What happens after I reach out?',
+    a: 'An advisor reviews what you share and follows up within a day with next steps, not a form to fill out.',
+  },
+];
+
+/* ---------- /how-it-works ---------- */
+
+export const howIntro = {
+  eyebrow: 'The process',
+  heading: 'Buying a home, broken into parts you can actually see.',
+  body: 'Most of the stress in a property purchase comes from not knowing what happens next. This is the whole sequence, start to keys — written down before you commit to anything.',
+  metrics: [
+    { value: '5', label: 'Stages, start to keys' },
+    { value: '48h', label: 'Average reply on an offer' },
+    { value: '11', label: 'Weeks, typical completion' },
+  ],
+};
+
+// Each stage is one row of the sticky-rail journey.
+export const howStages = [
+  {
+    id: 'brief',
+    label: 'Brief',
+    title: 'We start with how you want to live, not what you can borrow.',
+    body: 'A single conversation, usually an hour. Where you need to be, what you refuse to compromise on, what you would trade. We write it down and send it back to you so you can correct it.',
+    detail: 'Yours: one hour, and an honest answer about budget.',
+  },
+  {
+    id: 'shortlist',
+    label: 'Shortlist',
+    title: 'Six properties, not sixty.',
+    body: 'We filter against the brief rather than against the market. Anything that only half fits gets left out, with a note on why — so the shortlist teaches you something even when nothing on it works.',
+    detail: 'Yours: read six write-ups, tell us what is wrong with them.',
+  },
+  {
+    id: 'viewings',
+    label: 'Viewings',
+    title: 'Seen in daylight, and once more at the hour you would come home.',
+    body: 'Every property gets two visits before an offer. Light, noise, the walk from the station, the neighbours putting bins out. The things a listing photograph is designed not to tell you.',
+    detail: 'Yours: two visits per property you are serious about.',
+  },
+  {
+    id: 'offer',
+    label: 'Offer',
+    title: 'An offer with a number you can defend.',
+    body: 'We price from comparable sales that actually closed, not asking prices. You get the working, so when the counter-offer arrives you already know your ceiling and why it sits there.',
+    detail: 'Yours: the final call on the number. Always.',
+  },
+  {
+    id: 'completion',
+    label: 'Completion',
+    title: 'Paperwork handled, keys in hand.',
+    body: 'Surveys, searches, solicitors, the chain. We chase it and tell you weekly where it stands — including the weeks when the honest answer is that nothing moved.',
+    detail: 'Yours: sign where indicated, pick up the keys.',
+  },
+];
+
+// Comparison ledger — paired rows, no cards.
+export const howLedger = {
+  eyebrow: 'Division of labour',
+  heading: 'Who does what.',
+  body: 'The short version: we carry the parts that reward experience, you keep every decision that is yours to make.',
+  rows: [
+    { ours: 'Sourcing, including off-market', yours: 'Saying what you actually want' },
+    { ours: 'Pricing research and comparables', yours: 'Setting your ceiling' },
+    { ours: 'Negotiation and counter-offers', yours: 'The final yes or no' },
+    { ours: 'Surveys, searches, solicitor chasing', yours: 'Signing, once we explain it' },
+    { ours: 'Weekly status, good news or not', yours: 'Telling us when life changes' },
+  ],
+};
+
+export const howClose = {
+  eyebrow: 'Starting out',
+  heading: 'The first step is a conversation, and it costs nothing.',
+  body: 'No fee until you instruct us on a specific property. Begin with the brief and see whether the way we work suits you.',
+  button: 'Book the first conversation',
+  image: '/images/ZOFHTFDotyaUTQ8cgcNJouab1c.jpg',
 };

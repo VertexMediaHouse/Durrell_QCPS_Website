@@ -13,25 +13,37 @@ import { Journal } from './sections/Journal';
 import { Faqs } from './sections/Faqs';
 import { Cta } from './sections/Cta';
 import { Footer } from './sections/Footer';
+import { AboutPage } from './pages/AboutPage';
+import { HowItWorksPage } from './pages/HowItWorksPage';
 
 export default function App() {
   useReveal();
+
+  const path = window.location.pathname;
 
   return (
     <>
       <Header />
       <main>
-        <Hero />
-        <SearchBar />
-        <Properties />
-        <Services />
-        <WhyUs />
-        <About />
-        <Steps />
-        <Testimonials />
-        <Journal />
-        <Faqs />
-        <Cta />
+        {path === '/about' ? (
+          <AboutPage />
+        ) : path === '/how-it-works' ? (
+          <HowItWorksPage />
+        ) : (
+          <>
+            <Hero />
+            <SearchBar />
+            <Properties />
+            <Services />
+            <WhyUs />
+            <About />
+            <Steps />
+            <Testimonials />
+            <Journal />
+            <Faqs />
+            <Cta />
+          </>
+        )}
       </main>
       <Footer />
     </>
