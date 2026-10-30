@@ -390,3 +390,31 @@ export const howClose = {
   button: 'Book the first conversation',
   image: '/images/ZOFHTFDotyaUTQ8cgcNJouab1c.jpg',
 };
+
+/* ---------- /contact ---------- */
+
+export const contact = {
+  eyebrow: "Let's connect",
+  heading: ['Tell us what', 'you’re looking for.'],
+  body: 'Whether you have a property in mind, are preparing to sell, or want guidance on your next move, our team is here to help you explore the options.',
+  formHeading: 'Send us a message',
+  interests: [
+    'Buying a Property',
+    'Selling a Property',
+    'Renting',
+    'General Enquiry',
+  ],
+  consent: 'I agree that ESTAVORA may use my information to respond to this enquiry. Please see our',
+  submit: 'Send Enquiry',
+  detailsEyebrow: 'Contact details',
+  details: [
+    { icon: 'mail', label: 'Email', value: footer.email, href: `mailto:${footer.email}` },
+    { icon: 'phone', label: 'Phone', value: footer.phone, href: `tel:${footer.phone.replace(/[^+\d]/g, '')}` },
+    { icon: 'pin', label: 'Office', value: footer.address },
+    { icon: 'clock', label: 'Office Hours', value: 'Monday–Friday, 9:00 AM–6:00 PM' },
+  ],
+  detailsNote: 'Our team will review your message and follow up using the contact details you provide.',
+  callHeading: 'Prefer to talk?',
+  callBody: `Call our team at ${footer.phone}.`,
+  callButton: 'Call Our Team',
+};

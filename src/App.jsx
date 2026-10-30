@@ -15,6 +15,7 @@ import { Cta } from './sections/Cta';
 import { Footer } from './sections/Footer';
 import { AboutPage } from './pages/AboutPage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
+import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
   useReveal();
@@ -29,6 +30,8 @@ export default function App() {
           <AboutPage />
         ) : path === '/how-it-works' ? (
           <HowItWorksPage />
+        ) : path === '/contact' ? (
+          <ContactPage />
         ) : (
           <>
             <Hero />
