@@ -4,6 +4,9 @@ import { nav } from '../data';
 export function Header() {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
+  // marks the nav entry for the page actually being viewed; '/' only matches
+  // the homepage exactly, so subpages no longer all light up "Home"
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 24);
@@ -34,7 +37,7 @@ export function Header() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  aria-current={item.href === '/' ? 'page' : undefined}
+                  aria-current={item.href === path ? 'page' : undefined}
                 >
                   {item.label}
                 </a>
@@ -70,7 +73,11 @@ export function Header() {
         <ul>
           {nav.map((item) => (
             <li key={item.label}>
-              <a href={item.href} onClick={() => setOpen(false)}>
+              <a
+                href={item.href}
+                aria-current={item.href === path ? 'page' : undefined}
+                onClick={() => setOpen(false)}
+              >
                 {item.label}
               </a>
             </li>

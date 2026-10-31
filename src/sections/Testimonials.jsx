@@ -2,7 +2,7 @@ import { testimonials } from '../data';
 
 export function Testimonials() {
   return (
-    <section className="section section--paper">
+    <section className="section section--paper" id="seller-reviews">
       <div className="container">
         <span className="eyebrow reveal">Client stories</span>
         <div className="section-head reveal">

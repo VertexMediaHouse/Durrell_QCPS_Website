@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { howIntro, howStages, howLedger, howClose } from '../data';
+import { FaqExplorer } from '../sections/FaqExplorer';
 
 export function HowItWorksPage() {
   const [active, setActive] = useState(howStages[0].id);
@@ -103,6 +104,8 @@ export function HowItWorksPage() {
           </div>
         </div>
       </section>
+
+      <FaqExplorer />
 
       {/* Close: half photo, half paper, split down the container — not the
           home page's inset image panel. */}
