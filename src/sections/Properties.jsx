@@ -4,13 +4,12 @@ export function Properties() {
   return (
     <section className="section" id="properties">
       <div className="container">
-        <span className="eyebrow reveal">Featured homes</span>
+        <span className="eyebrow reveal">Commercial Portfolio</span>
         <div className="split-head reveal">
-          <h2>Exceptional properties, worth a closer look.</h2>
+          <h2>Prime commercial facilities, ready for your business.</h2>
           <div className="split-head__aside">
             <p>
-              Explore a considered collection of homes chosen for their
-              character, location, and potential.
+              Explore verified industrial, office, retail, and flex assets chosen for their functionality, strategic logistics access, and zoning.
             </p>
             <a className="btn btn--dark" href="/properties">
               View All Properties

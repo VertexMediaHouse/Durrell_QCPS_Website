@@ -22,6 +22,7 @@ import { FaqPage } from './pages/FaqPage';
 import { ComparePage } from './pages/ComparePage';
 import { AreasPage } from './pages/AreasPage';
 import { ReviewsPage } from './pages/ReviewsPage';
+import { PropertiesPage } from './pages/PropertiesPage';
 
 // ponytail: pathname lookup, no router dep. Swap in react-router if these
 // ever need client-side navigation or nested/dynamic routes.
@@ -31,6 +32,7 @@ const pages = {
   '/who-we-help': WhoWeHelpPage,
   '/contact': ContactPage,
   '/privacy-policy': PrivacyPage,
+  '/terms': PrivacyPage,
   '/faqs': FaqPage,
   '/faq': FaqPage,
   '/compare': ComparePage,
@@ -38,12 +40,14 @@ const pages = {
   '/areas-we-serve': AreasPage,
   '/buyer-reviews': ReviewsPage,
   '/get-my-offer': ContactPage,
+  '/properties': PropertiesPage,
 };
 
 export default function App() {
   useReveal();
 
-  const Page = pages[window.location.pathname];
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+  const Page = pages[currentPath] || pages[window.location.pathname];
 
   return (
     <>

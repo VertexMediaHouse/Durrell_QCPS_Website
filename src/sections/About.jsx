@@ -16,7 +16,7 @@ export function About() {
           <div className="about__media">
             <img
               src={about.image}
-              alt="Handing over the keys to a new home"
+              alt="QCPS team completing a commercial property transaction"
               width="900"
               height="700"
               loading="lazy"

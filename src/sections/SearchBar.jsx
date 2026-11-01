@@ -2,7 +2,7 @@ import { search } from '../data';
 
 const icons = {
   Location: 'M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z',
-  'Property Type': 'M4 11 12 4l8 7 M6 10v9h12v-9',
+  'Property Type': 'M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1',
   'Price Range': 'M4 7h16v10H4z M12 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z',
 };
 
@@ -20,10 +20,10 @@ export function SearchBar() {
           <Field label="Location" options={search.location} />
           <Field label="Property Type" options={search.type} />
           <Field label="Price Range" options={search.price} />
-          <button className="btn btn--dark searchbar__submit" type="submit">
+          <a className="btn btn--dark searchbar__submit" href="/properties">
             <span className="header-cta__dot" aria-hidden="true" />
             Find Properties
-          </button>
+          </a>
         </form>
       </div>
     </section>

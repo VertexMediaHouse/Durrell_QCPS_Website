@@ -7,7 +7,7 @@ export function Hero() {
       <div className="hero__bg">
         <img
           src={hero.image}
-          alt="A sunlit living room in a thoughtfully designed home"
+          alt="Modern commercial property and executive business facility"
           width="1920"
           height="1080"
         />

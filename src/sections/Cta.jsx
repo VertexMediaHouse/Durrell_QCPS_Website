@@ -8,9 +8,9 @@ export function Cta() {
   const [submitted, setSubmitted] = useState(false);
 
   const intents = [
-    { id: 'Acquiring', label: 'Acquiring', desc: 'Find off-market & private architectural properties' },
-    { id: 'Selling', label: 'Discreet Sale', desc: 'Confidential valuation & vetted private buyer access' },
-    { id: 'Advisory', label: 'Portfolio Strategy', desc: 'Cross-market analysis, yield modeling & estates' },
+    { id: 'Acquiring', label: 'Acquiring', desc: 'Find verified off-market commercial facilities' },
+    { id: 'Selling', label: 'Direct Sale', desc: 'Confidential valuation & direct cash purchase' },
+    { id: 'Advisory', label: 'Commercial Advisory', desc: 'Underwriting, cap rates, zoning & leaseback strategy' },
   ];
 
   const timelines = ['Immediate', '30–90 Days', 'Exploring'];
@@ -40,12 +40,12 @@ export function Cta() {
               </div>
 
               <h2 className="cta-lux__heading">
-                {cta.heading || 'Your next move starts with a conversation.'}
+                {cta.heading || 'Your next commercial move starts with a conversation.'}
               </h2>
 
               <p className="cta-lux__body">
-                Whether acquiring a landmark residence, discreetly marketing an off-market property,
-                or underwriting an acquisition, our senior partners work directly with you — without hand-offs.
+                Whether disposing of an industrial warehouse, seeking an as-is cash exit on a commercial asset,
+                or acquiring a functional facility for your business, our senior partners work directly with you — without hand-offs.
               </p>
 
               <div className="cta-lux__metrics">
@@ -74,18 +74,18 @@ export function Cta() {
                   <span>{footer?.phone || '+1 (212) 555-0148'}</span>
                 </a>
 
-                <a href={`mailto:${footer?.email || 'hello@estavora.example'}`} className="cta-lux__channel-link">
+                <a href={`mailto:${footer?.email || 'info@qcps.example'}`} className="cta-lux__channel-link">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                     <polyline points="22,6 12,13 2,6"/>
                   </svg>
-                  <span>{footer?.email || 'hello@estavora.example'}</span>
+                  <span>{footer?.email || 'info@qcps.example'}</span>
                 </a>
               </div>
 
               <div className="cta-lux__presence">
-                <span className="cta-lux__presence-label">Private Desks:</span>
-                <span className="cta-lux__presence-cities">New York · London · Miami · Geneva</span>
+                <span className="cta-lux__presence-label">Primary Desks:</span>
+                <span className="cta-lux__presence-cities">New York · Austin · Miami · Portland · Seattle</span>
               </div>
             </div>
 
@@ -93,7 +93,7 @@ export function Cta() {
             <div className="cta-lux__interactive-card">
               <div className="cta-card-header">
                 <span className="cta-card-eyebrow">Direct Engagement</span>
-                <h3 className="cta-card-title">Book a Private Briefing</h3>
+                <h3 className="cta-card-title">Book a Commercial Briefing</h3>
                 <p className="cta-card-desc">
                   Select your objective below to be paired immediately with the lead partner for that market.
                 </p>
@@ -210,8 +210,8 @@ export function Cta() {
                   ))}
                 </div>
                 <div className="cta-concierge-info">
-                  <div className="cta-concierge-title">Estavora Senior Partners</div>
-                  <div className="cta-concierge-sub">Direct access to principals · No call centers</div>
+                  <div className="cta-concierge-title">QCPS Commercial Advisory Team</div>
+                  <div className="cta-concierge-sub">Direct access to principals · No intermediaries</div>
                 </div>
               </div>
             </div>

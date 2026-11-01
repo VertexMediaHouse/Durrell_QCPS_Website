@@ -26,30 +26,39 @@ export function Header() {
   return (
     <header className={`site-header${solid ? ' is-solid' : ''}`}>
       <div className="site-header__inner container">
-        <a className="wordmark" href="/" aria-label="ESTAVORA — home">
+        <a className="wordmark" href="/" aria-label="QCPS — Quick Commercial Property Solution">
           <span className="wordmark__dot" />
-          ESTAVORA
+          <span className="wordmark__text">QCPS</span>
         </a>
 
         <nav className="site-nav" aria-label="Main">
           <ul>
-            {nav.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  aria-current={item.href === path ? 'page' : undefined}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {nav.map((item) => {
+              const isActive = item.href === path;
+              return (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className={`nav-chip-link${isActive ? ' is-active-chip' : ''}`}
+                    aria-current={isActive ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
-        <a className="btn btn--primary site-header__cta" href="/properties">
-          <span className="header-cta__dot" />
-          Explore Properties
-        </a>
+        <div className="site-header__actions">
+          <a className="btn btn--outline-dark site-header__btn-offer" href="/contact">
+            Get My Offer
+          </a>
+          <a className="btn btn--primary site-header__cta" href="/properties">
+            <span className="header-cta__dot" />
+            Explore Properties
+          </a>
+        </div>
 
         <button
           className="burger"
@@ -75,6 +84,7 @@ export function Header() {
             <li key={item.label}>
               <a
                 href={item.href}
+                className={item.href === path ? 'is-active-chip' : ''}
                 aria-current={item.href === path ? 'page' : undefined}
                 onClick={() => setOpen(false)}
               >
@@ -83,9 +93,22 @@ export function Header() {
             </li>
           ))}
         </ul>
-        <a className="btn btn--primary" href="/properties">
-          Explore Properties
-        </a>
+        <div className="mobile-nav__actions">
+          <a
+            className="btn btn--outline-dark"
+            href="/contact"
+            onClick={() => setOpen(false)}
+          >
+            Get My Offer
+          </a>
+          <a
+            className="btn btn--primary"
+            href="/properties"
+            onClick={() => setOpen(false)}
+          >
+            Explore Properties
+          </a>
+        </div>
       </div>
     </header>
   );

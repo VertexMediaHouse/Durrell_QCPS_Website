@@ -12,13 +12,12 @@ export function Services() {
   return (
     <section className="section section--paper">
       <div className="container">
-        <span className="eyebrow reveal">What we do</span>
+        <span className="eyebrow reveal">Commercial Solutions</span>
         <div className="split-head reveal">
-          <h2>A more considered way to move.</h2>
+          <h2>Direct, reliable commercial real estate services.</h2>
           <div className="split-head__aside">
             <p>
-              Whether you are buying, selling, or renting, every step is shaped
-              around what you need from your next home.
+              Whether you need to sell a commercial building as-is for cash, or acquire functional space for your business, we handle every transaction directly with transparent terms.
             </p>
           </div>
         </div>

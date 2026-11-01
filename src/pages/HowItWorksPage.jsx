@@ -87,7 +87,7 @@ export function HowItWorksPage() {
 
           <div className="how-ledger reveal">
             <div className="how-ledger__cols" aria-hidden="true">
-              <span>ESTAVORA</span>
+              <span>QCPS</span>
               <span>You</span>
             </div>
             <ul>

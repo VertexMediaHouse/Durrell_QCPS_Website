@@ -19,7 +19,7 @@ export function AboutPage() {
             <p className="about-hero__body reveal">{aboutIntro.body}</p>
           </div>
           <div className="about-hero__media reveal">
-            <img src={aboutIntro.image} alt="Inside the ESTAVORA office" />
+            <img src={aboutIntro.image} alt="Inside the QCPS office" />
           </div>
         </div>
       </section>
@@ -52,13 +52,12 @@ export function AboutPage() {
       {/* Hover-lift card device from Properties, repurposed as a team grid */}
       <section className="section">
         <div className="container">
-          <span className="eyebrow reveal">The people</span>
+          <span className="eyebrow reveal">Acquisitions Leadership</span>
           <div className="split-head reveal">
-            <h2>A small team, deliberately.</h2>
+            <h2>Direct leadership, without layered bureaucracy.</h2>
             <div className="split-head__aside">
               <p>
-                We’ve stayed intentionally small. Fewer advisors means every
-                client gets more of their time, not less.
+                Our principals evaluate transactions directly. You work with senior decision-makers who hold capital authority from day one.
               </p>
             </div>
           </div>
@@ -80,7 +79,7 @@ export function AboutPage() {
       <section className="section section--dark about-stat">
         <div className="container about-stat__grid">
           <div className="about-stat__media reveal">
-            <img src={aboutStat.image} alt="A finished property handover" loading="lazy" />
+            <img src={aboutStat.image} alt="Commercial property transaction completion" loading="lazy" />
             <div className="about-stat__card">
               <strong>
                 {aboutStat.statValue}
@@ -92,7 +91,7 @@ export function AboutPage() {
           <blockquote className="about-stat__quote reveal">
             <span className="quote__mark" aria-hidden="true">&rdquo;</span>
             {aboutStat.quote}
-            <span className="about-stat__attrib">Renata Soto — Founder</span>
+            <span className="about-stat__attrib">Renata Soto — Head of Acquisitions</span>
           </blockquote>
         </div>
       </section>
