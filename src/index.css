@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  /* palette — lifted from the Framer export's design tokens */
-  --ink: #171512;
-  --body: #6e6a64;
-  --accent: #f05a28;
-  --accent-hover: #d9471a;
-  --paper: #f5f4f1;
-  --paper-alt: #eeede9;
-  --dark: #1c1a17;
-  --dark-alt: #2a2723;
-  --hairline: #17151214;
-  --white: #fff;
+  /* palette — updated color coding */
+  --ink: #17324D;          /* Deep Navy: Headings, navigation and main brand elements */
+  --body: #4A5568;         /* Neutral slate text for high readability */
+  --accent: #258A82;       /* Welcoming Teal: Calls to action and selective highlights */
+  --accent-hover: #1e7069; /* Slightly darker teal for hover states */
+  --paper: #F1F4F6;        /* Light Gray: Subtle section backgrounds */
+  --paper-alt: #E5EAEF;    /* Light Gray border/subtle accent variant */
+  --dark: #17324D;         /* Deep Navy: Dark sections and brand footer */
+  --dark-alt: #12283E;     /* Deeper navy for hover/contrast */
+  --hairline: #17324D1A;   /* Deep Navy with subtle opacity for borders */
+  --white: #FFFFFF;        /* White: Clean backgrounds and readable space */
 
   /* dark-section variants */
   --dark-hairline: #ffffff1f;

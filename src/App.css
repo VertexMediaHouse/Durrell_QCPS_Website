@@ -2086,7 +2086,7 @@ details[open] .faq__icon::after {
   .principle__no {
     color: transparent;
     opacity: 1;
-    -webkit-text-stroke: 1.5px #1715123d;
+    -webkit-text-stroke: 1.5px #17324d3d;
     transition: -webkit-text-stroke-color 0.3s ease, color 0.3s ease;
   }
 }
@@ -3849,7 +3849,7 @@ details[open] .faq__icon::after {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(0deg, #171512f2 0%, #171512a6 28%, #17151200 60%);
+  background: linear-gradient(0deg, #17324df2 0%, #17324da6 28%, #17324d00 60%);
 }
 
 .whoh__cap {
@@ -3941,7 +3941,7 @@ details[open] .faq__icon::after {
   }
 
   .whoh__panel a::after {
-    background: linear-gradient(0deg, #171512f2 0%, #171512b3 60%, #17151240 100%);
+    background: linear-gradient(0deg, #17324df2 0%, #17324db3 60%, #17324d40 100%);
   }
 
   .whoh__kicker {
