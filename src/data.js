@@ -14,6 +14,14 @@ export const nav = [
   { label: 'Contact', href: '/contact' },
 ];
 
+// Header menu: "Company" dropdown groups these; Contact is reached via the
+// "Get My Offer" button. Footer still uses the full `nav` list.
+const companyLabels = ['How It Works', 'About Us', 'Who We Help', 'Areas We Serve'];
+export const navCompany = nav.filter((i) => companyLabels.includes(i.label));
+export const navMain = nav.filter(
+  (i) => !companyLabels.includes(i.label) && i.label !== 'Contact'
+);
+
 export const hero = {
   eyebrow: 'Direct Commercial Acquisitions & Advisory',
   heading: 'Quick, reliable solutions for commercial property owners and buyers.',
@@ -438,41 +446,42 @@ export const howIntro = {
   ],
 };
 
+export const howJourney = {
+  eyebrow: 'The Process',
+  heading: 'Five steps from first call to wire transfer.',
+  body: 'Every stage is defined up front, so you always know what happens next and what we need from you.',
+};
+
 export const howStages = [
   {
     id: 'intake',
     label: 'Intake',
     title: 'Property intake & objective review.',
     body: 'You share your commercial address, building type, square footage, current rent roll (if tenanted), and ideal timeline. We review municipal zoning and parcel data.',
-    detail: 'Required from you: basic building specifications and operating status.',
   },
   {
     id: 'underwriting',
     label: 'Underwriting',
     title: 'Desktop underwriting & comparable sales analysis.',
     body: 'We analyze closed commercial sales, current submarket capitalization rates, and physical replacement costs to establish a realistic valuation.',
-    detail: 'Our commitment: a clear explanation of how the valuation was calculated.',
   },
   {
     id: 'offer',
     label: 'Offer',
     title: 'Firm written purchase agreement within 48 hours.',
     body: 'We deliver a straightforward purchase contract with verified proof of funds. No financing contingencies, no broker commission deductions, and as-is purchase terms.',
-    detail: 'Your decision: review terms with your legal counsel and decide on your timeline.',
   },
   {
     id: 'diligence',
     label: 'Due Diligence',
     title: 'Focused site visit and clean title examination.',
     body: 'We conduct a targeted walk-through focusing on structural elements, roofing, and mechanicals. Concurrently, title and escrow are opened with a licensed commercial title agency.',
-    detail: 'No retail open houses or public marketing disruptions.',
   },
   {
     id: 'closing',
     label: 'Closing',
     title: 'Funding and wire transfer through escrow.',
     body: 'Upon title clearance, escrow completes closing. Proceeds are wired directly to your designated account, and closing documents are executed.',
-    detail: 'Closing completes on the exact date agreed in the contract.',
   },
 ];
 

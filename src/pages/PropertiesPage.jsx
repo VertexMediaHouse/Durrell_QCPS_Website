@@ -166,7 +166,7 @@ export function PropertiesPage() {
               {/* Location */}
               <div className="props-select-field">
                 <label htmlFor="p-loc">Market / City</label>
-                <div className="props-select-wrapper">
+                <div className="props-select-wrap">
                   <select
                     id="p-loc"
                     value={selectedLocation}
@@ -178,7 +178,7 @@ export function PropertiesPage() {
                       </option>
                     ))}
                   </select>
-                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-select-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-chevron">
                     <path d="m6 9 6 6 6-6" />
                   </svg>
                 </div>
@@ -187,7 +187,7 @@ export function PropertiesPage() {
               {/* Type */}
               <div className="props-select-field">
                 <label htmlFor="p-type">Property Type</label>
-                <div className="props-select-wrapper">
+                <div className="props-select-wrap">
                   <select
                     id="p-type"
                     value={selectedType}
@@ -199,7 +199,7 @@ export function PropertiesPage() {
                       </option>
                     ))}
                   </select>
-                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-select-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-chevron">
                     <path d="m6 9 6 6 6-6" />
                   </svg>
                 </div>
@@ -208,7 +208,7 @@ export function PropertiesPage() {
               {/* Price Bracket */}
               <div className="props-select-field">
                 <label htmlFor="p-price">Price Bracket</label>
-                <div className="props-select-wrapper">
+                <div className="props-select-wrap">
                   <select
                     id="p-price"
                     value={selectedPrice}
@@ -220,7 +220,7 @@ export function PropertiesPage() {
                       </option>
                     ))}
                   </select>
-                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-select-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-chevron">
                     <path d="m6 9 6 6 6-6" />
                   </svg>
                 </div>
@@ -229,7 +229,7 @@ export function PropertiesPage() {
               {/* Sort Order */}
               <div className="props-select-field">
                 <label htmlFor="p-sort">Sort Order</label>
-                <div className="props-select-wrapper">
+                <div className="props-select-wrap">
                   <select
                     id="p-sort"
                     value={sortBy}
@@ -240,7 +240,7 @@ export function PropertiesPage() {
                     <option value="price-desc">Price: High to Low</option>
                     <option value="name">Name (A–Z)</option>
                   </select>
-                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-select-chevron">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="props-chevron">
                     <path d="m6 9 6 6 6-6" />
                   </svg>
                 </div>
@@ -248,8 +248,8 @@ export function PropertiesPage() {
             </div>
 
             {/* Bottom Row: Active counts & Reset */}
-            <div className="props-console__bottom">
-              <div className="props-result-count">
+            <div className="props-console__bar">
+              <div className="props-results-info">
                 <strong>{filteredProperties.length}</strong>{' '}
                 {filteredProperties.length === 1 ? 'property' : 'properties'} available
                 {hasActiveFilters && (
@@ -335,11 +335,11 @@ export function PropertiesPage() {
                           height="420"
                         />
                         <div className="prop-card__badges">
-                          <span className={`prop-badge ${p.tag === 'For Rent' ? 'prop-badge--rent' : 'prop-badge--sale'}`}>
+                          <span className="prop-card__tag">
                             {p.tag}
                           </span>
                           {p.featured && (
-                            <span className="prop-badge prop-badge--featured">
+                            <span className="prop-card__featured">
                               Featured
                             </span>
                           )}
@@ -347,7 +347,7 @@ export function PropertiesPage() {
 
                         <button
                           type="button"
-                          className={`prop-card__save-btn${isSaved ? ' is-saved' : ''}`}
+                          className={`prop-card__save${isSaved ? ' is-saved' : ''}`}
                           onClick={(e) => toggleSave(e, p.id)}
                           aria-label={isSaved ? 'Remove from saved' : 'Save property'}
                         >

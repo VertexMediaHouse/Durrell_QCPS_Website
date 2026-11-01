@@ -99,7 +99,7 @@ ul {
 }
 
 .section {
-  padding-block: 72px;
+  padding-block: 56px;
 }
 
 .section--paper {
@@ -228,7 +228,7 @@ ul {
 
 @media (max-width: 1199px) {
   .section {
-    padding-block: 64px;
+    padding-block: 48px;
   }
   .section-head h2 {
     font-size: 36px;
@@ -237,7 +237,7 @@ ul {
 
 @media (max-width: 809px) {
   .section {
-    padding-block: 52px;
+    padding-block: 40px;
   }
   .section-head h2 {
     font-size: 30px;

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { howIntro, howStages, howLedger, howClose } from '../data';
+import { howIntro, howJourney, howStages, howLedger, howClose } from '../data';
 import { FaqExplorer } from '../sections/FaqExplorer';
 
 export function HowItWorksPage() {
@@ -45,6 +45,11 @@ export function HowItWorksPage() {
 
       {/* Device: sticky stage rail tracking a column of full-height rows. */}
       <section className="section section--dark how-journey">
+        <div className="container">
+          <span className="eyebrow reveal">{howJourney.eyebrow}</span>
+          <h2 className="how-journey__heading reveal">{howJourney.heading}</h2>
+          <p className="how-journey__body reveal">{howJourney.body}</p>
+        </div>
         <div className="container how-journey__grid">
           <nav className="how-rail" aria-label="Stages">
             <ol>
@@ -70,7 +75,6 @@ export function HowItWorksPage() {
               <article key={s.id} id={s.id} data-stage={s.id} className="how-row">
                 <h2 className="reveal">{s.title}</h2>
                 <p className="reveal">{s.body}</p>
-                <p className="how-row__detail reveal">{s.detail}</p>
               </article>
             ))}
           </div>

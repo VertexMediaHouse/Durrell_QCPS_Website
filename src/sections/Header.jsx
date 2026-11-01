@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { nav } from '../data';
+import { Fragment, useEffect, useState } from 'react';
+import { navMain, navCompany } from '../data';
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -7,6 +7,7 @@ export function Header() {
   // marks the nav entry for the page actually being viewed; '/' only matches
   // the homepage exactly, so subpages no longer all light up "Home"
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  const companyActive = navCompany.some((i) => i.href === path);
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 24);
@@ -33,10 +34,11 @@ export function Header() {
 
         <nav className="site-nav" aria-label="Main">
           <ul>
-            {nav.map((item) => {
+            {navMain.map((item, i) => {
               const isActive = item.href === path;
               return (
-                <li key={item.label}>
+                <Fragment key={item.label}>
+                <li>
                   <a
                     href={item.href}
                     className={`nav-chip-link${isActive ? ' is-active-chip' : ''}`}
@@ -45,6 +47,31 @@ export function Header() {
                     {item.label}
                   </a>
                 </li>
+                {i === 1 && (
+            <li className="nav-dropdown">
+              <button
+                type="button"
+                className={companyActive ? 'is-active-chip' : undefined}
+                aria-haspopup="true"
+              >
+                Company
+              </button>
+              <ul className="nav-dropdown__menu">
+                {navCompany.map((item) => (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      className={item.href === path ? 'is-active-chip' : ''}
+                      aria-current={item.href === path ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+                )}
+                </Fragment>
               );
             })}
           </ul>
@@ -80,8 +107,9 @@ export function Header() {
         hidden={!open}
       >
         <ul>
-          {nav.map((item) => (
-            <li key={item.label}>
+          {navMain.map((item, i) => (
+            <Fragment key={item.label}>
+            <li>
               <a
                 href={item.href}
                 className={item.href === path ? 'is-active-chip' : ''}
@@ -91,6 +119,24 @@ export function Header() {
                 {item.label}
               </a>
             </li>
+            {i === 1 && (
+              <>
+                <li className="mobile-nav__group">Company</li>
+          {navCompany.map((item) => (
+            <li key={item.label} className="mobile-nav__sub">
+              <a
+                href={item.href}
+                className={item.href === path ? 'is-active-chip' : ''}
+                aria-current={item.href === path ? 'page' : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+              </>
+            )}
+            </Fragment>
           ))}
         </ul>
         <div className="mobile-nav__actions">

@@ -83,6 +83,105 @@
   box-shadow: 0 4px 12px rgba(23, 50, 77, 0.22);
 }
 
+.site-nav button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  color: var(--body);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.site-nav button::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.site-nav button:hover,
+.nav-dropdown:focus-within > button {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.site-nav button.is-active-chip {
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.site-nav button:focus-visible {
+  outline: 2px solid var(--accent);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* padding-top bridges the gap so hover isn't lost between button and menu */
+.site-nav .nav-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  min-width: 190px;
+}
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+  display: flex;
+}
+
+.nav-dropdown__menu li {
+  background: var(--white);
+  border-inline: 1px solid var(--hairline);
+  padding: 2px 6px;
+}
+
+.nav-dropdown__menu li:first-child {
+  border-top: 1px solid var(--hairline);
+  border-radius: 14px 14px 0 0;
+  padding-top: 6px;
+}
+
+.nav-dropdown__menu li:last-child {
+  border-bottom: 1px solid var(--hairline);
+  border-radius: 0 0 14px 14px;
+  padding-bottom: 6px;
+  box-shadow: 0 10px 24px #17324d14;
+}
+
+.nav-dropdown__menu a {
+  display: flex;
+  width: 100%;
+}
+
+.mobile-nav__group {
+  padding: 18px 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--body);
+}
+
+.mobile-nav__sub a {
+  padding-left: 14px;
+}
+
 .site-header__actions {
   display: flex;
   align-items: center;
@@ -2614,6 +2713,18 @@ details[open] .faq__icon::after {
   padding-block: 64px;
 }
 
+.how-journey__heading {
+  font-size: clamp(28px, 4vw, 42px);
+  max-width: 720px;
+  margin-bottom: 16px;
+}
+
+.how-journey__body {
+  max-width: 560px;
+  margin-bottom: 48px;
+  color: var(--dark-body);
+}
+
 .how-journey__grid {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -2630,9 +2741,9 @@ details[open] .faq__icon::after {
 
 .how-rail {
   position: sticky;
-  /* centred in the viewport so the active item lines up with the row it marks */
-  top: 50vh;
-  transform: translateY(-50%);
+  /* roughly centred in the viewport (rail is ~260px tall). No transform: it
+     shifted the rail up out of its section into the hero above. */
+  top: calc(50vh - 130px);
 }
 
 .how-rail ol {
@@ -2684,11 +2795,6 @@ details[open] .faq__icon::after {
 }
 
 .how-row {
-  /* tall enough that one stage owns the viewport's middle band at a time */
-  min-height: 56vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-block: 40px;
 }
 
@@ -3979,8 +4085,8 @@ details[open] .faq__icon::after {
 }
 
 .whoh__heading {
-  font-size: 104px;
-  line-height: 0.95;
+  font-size: 64px;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   font-weight: 500;
   color: var(--white);
@@ -4104,7 +4210,7 @@ details[open] .faq__icon::after {
   }
 
   .whoh__heading {
-    font-size: 76px;
+    font-size: 52px;
   }
 
   .whoh__panels {
@@ -4118,7 +4224,7 @@ details[open] .faq__icon::after {
   }
 
   .whoh__heading {
-    font-size: 52px;
+    font-size: 38px;
   }
 
   .whoh__panels {
@@ -4622,7 +4728,7 @@ details[open] .faq__icon::after {
   background: var(--accent);
 }
 
-.compare-journey-title {
+.compare-journey-block .compare-journey-title {
   font-size: 22px;
   font-weight: 600;
   color: var(--ink);
@@ -4652,7 +4758,7 @@ details[open] .faq__icon::after {
   background: var(--white);
 }
 
-.compare-step-top {
+.compare-step-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4687,7 +4793,7 @@ details[open] .faq__icon::after {
   color: var(--accent);
 }
 
-.compare-step-title {
+.compare-journey-block .compare-step-title {
   font-size: 17px;
   font-weight: 600;
   color: var(--ink);
@@ -5726,7 +5832,7 @@ details[open] .faq__icon::after {
 /* ---- close: hero device ---- */
 
 .rev-close {
-  padding: 0 var(--gutter) var(--gutter);
+  padding: var(--gutter) var(--gutter) var(--gutter);
   background: var(--paper);
 }
 
@@ -6228,6 +6334,10 @@ details[open] .faq__icon::after {
   border-color: #258a8240;
 }
 
+.prop-card__media-link {
+  display: block;
+}
+
 .prop-card__media {
   position: relative;
   overflow: hidden;
@@ -6590,4 +6700,3 @@ details[open] .faq__icon::after {
     padding: 18px;
   }
 }
-
