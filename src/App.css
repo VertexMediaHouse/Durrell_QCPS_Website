@@ -33,6 +33,34 @@
   flex-shrink: 0;
 }
 
+.wordmark__logo {
+  width: 54px;
+  height: 60px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.wordmark__stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.wordmark__title {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.wordmark__sub {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
 .wordmark__dot {
   width: 10px;
   height: 10px;
@@ -945,6 +973,10 @@
   height: 40px;
   border-radius: 50%;
   background: var(--paper);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -1894,11 +1926,35 @@ details[open] .faq__icon::after {
   max-width: 320px;
 }
 
+.site-footer__badges-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 6px;
+}
+
 .site-footer__badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 6px;
+}
+
+/* double class: the base .site-footer__legal-links (later in file) resets margin */
+.site-footer__legal-links.site-footer__legal-links--nav {
+  justify-content: space-between;
+  gap: 8px;
+  /* pinned to the column foot so it sits on the same row as the last brand badge */
+  margin-top: auto;
+  min-height: 32px;
+  align-items: center;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.site-footer__col--nav {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-pill-badge {
@@ -2014,11 +2070,23 @@ details[open] .faq__icon::after {
 .site-footer__bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
   padding-top: 28px;
   font-size: 13.5px;
   color: rgba(255, 255, 255, 0.55);
+}
+
+.site-footer__credit {
+  margin-left: auto;
+}
+
+.site-footer__credit a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer__credit a:hover {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 .site-footer__legal-links {

@@ -9,16 +9,21 @@ export function Footer() {
           {/* Col 1: Brand identity, full name and mission */}
           <div className="site-footer__col site-footer__col--brand">
             <a className="wordmark wordmark--footer" href="/" aria-label="QCPS Home">
-              <span className="wordmark__dot" />
-              <span className="wordmark__name">QCPS</span>
+              <img className="wordmark__logo" src="/images/qcps-mark.png" alt="" width="54" height="60" />
+              <span className="wordmark__stack">
+            <span className="wordmark__title">Quick Close</span>
+            <span className="wordmark__sub">Property Solutions</span>
+          </span>
             </a>
             <p className="site-footer__acronym">Quick Commercial Property Solution</p>
             <p className="site-footer__about">
               Empowering commercial property buyers, sellers, and operators with transparent valuations, direct acquisitions, and zero broker commissions.
             </p>
-            <div className="site-footer__badges">
-              <span className="footer-pill-badge">Commercial Specialist</span>
-              <span className="footer-pill-badge">Direct Buyer Desk</span>
+            <div className="site-footer__badges-row">
+              <div className="site-footer__badges">
+                <span className="footer-pill-badge">Commercial Specialist</span>
+                <span className="footer-pill-badge">Direct Buyer Desk</span>
+              </div>
             </div>
           </div>
 
@@ -31,6 +36,17 @@ export function Footer() {
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}
+            </ul>
+            <ul className="site-footer__legal-links site-footer__legal-links--nav">
+              <li>
+                <a href="/privacy-policy">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/terms">Terms of Service</a>
+              </li>
+              <li>
+                <a href="/contact">Direct Support</a>
+              </li>
             </ul>
           </div>
 
@@ -100,17 +116,13 @@ export function Footer() {
           <div className="site-footer__copyright">
             {footer.copyright}
           </div>
-          <ul className="site-footer__legal-links">
-            <li>
-              <a href="/privacy-policy">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="/terms">Terms of Service</a>
-            </li>
-            <li>
-              <a href="/contact">Direct Support</a>
-            </li>
-          </ul>
+          <div className="site-footer__credit">
+            Made with <span aria-label="love">❤️</span> by{' '}
+            <a href="https://www.vertexmediahouse.com" target="_blank" rel="noopener noreferrer">
+              Vertex Media House
+            </a>
+          </div>
+
         </div>
       </div>
     </footer>

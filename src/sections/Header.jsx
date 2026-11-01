@@ -28,8 +28,11 @@ export function Header() {
     <header className={`site-header${solid ? ' is-solid' : ''}`}>
       <div className="site-header__inner container">
         <a className="wordmark" href="/" aria-label="QCPS — Quick Commercial Property Solution">
-          <span className="wordmark__dot" />
-          <span className="wordmark__text">QCPS</span>
+          <img className="wordmark__logo" src="/images/qcps-mark.png" alt="" width="54" height="60" />
+          <span className="wordmark__stack">
+            <span className="wordmark__title">Quick Close</span>
+            <span className="wordmark__sub">Property Solutions</span>
+          </span>
         </a>
 
         <nav className="site-nav" aria-label="Main">

@@ -9,7 +9,7 @@ export function About() {
             <span className="eyebrow">{about.eyebrow}</span>
             <h2>{about.heading}</h2>
             <p>{about.body}</p>
-            <a className="btn btn--light" href="/about">
+            <a className="btn btn--dark" href="/about">
               {about.cta}
             </a>
           </div>
